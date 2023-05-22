@@ -10,13 +10,8 @@ router.get('/', async (req, res) => {
       const postData = await Post.findAll({
         where: {
             userId: req.session.user_id
-      },  include: [
-        {
-          model: User,
-          attributes: 'username',
-        },
-      ]
-  });
+        }
+      });
       console.log(postData)
   
       // Serialize data so the template can read it
