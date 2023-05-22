@@ -8,7 +8,8 @@ router.get('/', async (req, res) => {
     const postData = await Post.findAll({
       include: [
         {
-          model: User
+          model: User,
+          attributes: ['username']
         },
       ],
     });
@@ -120,10 +121,8 @@ router.get('/newpost', (req, res) => {
   res.render('newpost');
 });
 
-router.get('/editpost', (req, res) => {
-
- 
-  res.render('editpost');
-});
+// router.get('/editpost', (req, res) => {
+//   res.render('editpost');
+// });
 
 module.exports = router;

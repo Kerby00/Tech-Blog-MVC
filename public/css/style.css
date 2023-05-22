@@ -58,3 +58,8 @@ h3{
     border-style: solid;
 
 }
+
+textarea{
+    width: 250px;
+    height: 250px;
+}

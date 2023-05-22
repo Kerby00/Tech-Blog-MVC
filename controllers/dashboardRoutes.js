@@ -15,9 +15,9 @@ router.get('/', async (req, res) => {
       console.log(postData)
   
       // Serialize data so the template can read it
-      const posts = postData.map((post) => post.get({ plain: false}));
+      const posts = postData.map((post) => post.get({ plain: false }));
   // res.json(posts)
-  //     Pass serialized data and session flag into template
+      // Pass serialized data and session flag into template
       res.render('dashboard', { 
         posts, 
         logged_in: req.session.logged_in 
@@ -33,7 +33,7 @@ router.get('/', async (req, res) => {
   // });
 
   
-  router.get('/edit/:id', withAuth, async (req, res) => {
+  router.get('/:id/editpost', withAuth, async (req, res) => {
     try {
         const postData = await Post.findByPk(req.params.id, {
         });
