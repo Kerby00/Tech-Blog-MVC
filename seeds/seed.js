@@ -26,7 +26,7 @@ let post = [1, 2, 3]
     await Comment.create({
       ...comment,
       userId: users[Math.floor(Math.random() * users.length)].id,
-      postId: posts[Math.floor(Math.random() * posts.length)]
+      postId: post[Math.floor(Math.random() * post.length)]
     });
 
   process.exit(0);
