@@ -4,14 +4,20 @@ const withAuth = require('../utils/auth');
 
 
 router.get('/', async (req, res) => {
+  console.log(req.session)
     try {
       // Get all projects and JOIN with user data
       const postData = await Post.findAll({
         where: {
             userId: req.session.user_id
-        }
-      });
-      console.log(req.session)
+      },  include: [
+        {
+          model: User,
+          attributes: 'username',
+        },
+      ]
+  });
+      console.log(postData)
   
       // Serialize data so the template can read it
       const posts = postData.map((post) => post.get({ plain: false }));

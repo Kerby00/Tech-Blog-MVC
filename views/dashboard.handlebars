@@ -1,15 +1,15 @@
-{{#if logged_in}}
 <div>
-    <h2> Hello {{username}}</h2>
+ <h2>My Posts</h2>
     <a href="/newpost">NewPost</a>
     <a href="/">Home</a>
-  {{#each posts}}
+<div>
+  {{#each post}}
     <h2>
-        {{posts.title}}
+        {{title}}
     </h2>
     <h3>
-        {{posts.body}}
+        {{body}}
     </h3>
     {{/each}}
 </div>
-{{/if}}
+</div>
