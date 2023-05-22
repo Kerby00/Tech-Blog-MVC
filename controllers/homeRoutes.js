@@ -8,8 +8,7 @@ router.get('/', async (req, res) => {
     const postData = await Post.findAll({
       include: [
         {
-          model: User,
-          attribute: ['username'],
+          model: User
         },
       ],
     });
@@ -116,10 +115,15 @@ router.get('/signup', (req, res) => {
 });
 
 router.get('/newpost', (req, res) => {
-  // If the user is already logged in, redirect the request to another route
+
  
   res.render('newpost');
 });
 
+router.get('/editpost', (req, res) => {
+
+ 
+  res.render('editpost');
+});
 
 module.exports = router;

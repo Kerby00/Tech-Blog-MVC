@@ -2,14 +2,19 @@
  <h2>My Posts</h2>
     <a href="/newpost">NewPost</a>
     <a href="/">Home</a>
-<div>
-  {{#each post}}
+
+  {{#each posts}}
+  <div class="divs">
     <h2>
         {{title}}
     </h2>
     <h3>
         {{body}}
     </h3>
+    <form>
+<button id="edits" type="submit"><a href="/editpost"></a>edit post</button>
+</form>
+    </div>
     {{/each}}
-</div>
+
 </div>

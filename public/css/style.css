@@ -7,4 +7,54 @@ div{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
+}
+
+.divs{
+    color: black;
+    text-decoration: none;
+    background-color: gray;
+    border-radius: 10px;
+    border-width: 5px;
+border-style: solid;
+font-size: xx-large;
+}
+a{
+    color: black;
+    text-decoration: none;
+    background-color: gray;
+    border-radius: 10px;
+    border-width: 2px;
+border-style: solid;
+font-size: xx-large;
+}
+
+a:hover{
+    box-shadow: -9px 2px 15px 0px rgba(0,0,0,0.75);;
+}
+
+button{
+    color: black;
+    text-decoration: none;
+    background-color: gray;
+    border-radius: 10px;
+    border-width: 2px;
+border-style: solid;
+font-size: xx-large;
+}
+
+button:hover{
+    box-shadow: -9px 2px 15px 0px rgba(0,0,0,0.75);;
+}
+
+h2{
+    text-decoration-line: underline;
+}
+
+h3{
+    background-color: white;
+    border-radius: 5px;
+    border-width: 2px;
+    border-style: solid;
+
 }
