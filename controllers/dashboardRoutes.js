@@ -11,6 +11,7 @@ router.get('/', async (req, res) => {
             userId: req.session.user_id
         }
       });
+      console.log(req.session)
   
       // Serialize data so the template can read it
       const posts = postData.map((post) => post.get({ plain: false }));
@@ -26,9 +27,9 @@ router.get('/', async (req, res) => {
   });
 
 
-  router.get('/newpost', withAuth, (req, res) => {
-    res.render('newpost');
-  });
+  // router.get('/newpost', withAuth, (req, res) => {
+  //   res.render('newpost');
+  // });
 
   
   router.get('/edit/:id', withAuth, async (req, res) => {

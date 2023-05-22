@@ -13,8 +13,12 @@ const newpost = async (event) => {
 
         if (response.ok) {
             document.location.replace('/dashboard')
+            console.log(title)
+            console.log(body)
         } else {
             alert(response.statusText);
+            console.log(title)
+            console.log(body)
         }
     }
 }
@@ -22,4 +26,4 @@ const newpost = async (event) => {
 // Event listener for form submit
 document
     .querySelector('#newPosty')
-    .addEventListener('submit', newpost)
+    .addEventListener('onclick', newpost)
